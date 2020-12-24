@@ -24,3 +24,30 @@ Print a message:
 <list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
+
+
+def listOfTelemarketers():
+    all_number_with_text_records = set()
+    all_numbers_receving_incoming_calls = set()
+
+    for each_text in texts:
+        all_number_with_text_records.add(each_text[0])
+        all_number_with_text_records.add(each_text[1])
+
+    for each_call in calls:
+        all_numbers_receving_incoming_calls.add(each_call[1])
+
+    telemarketer_numbers = set()
+    for each_call in calls:
+        if each_call[0] not in all_numbers_receving_incoming_calls:
+            if each_call[0] not in all_number_with_text_records:
+                telemarketer_numbers.add(each_call[0])
+
+    telemarketer_numbers = list(telemarketer_numbers)
+    telemarketer_numbers.sort()
+    print("These numbers could be telemarketers: ")
+    for telephone_number in telemarketer_numbers:
+        print(telephone_number)
+
+
+listOfTelemarketers()
