@@ -1,0 +1,33 @@
+TASK0:
+--------
+Worst-case time-complexity: O(1)
+In this question, the first element and the last element is being accessed from the List. In worst case, accessing a list at a particular index is constant time.
+
+
+TASK1:
+--------
+Worst-case time-complexity: O(n)
+There are two for loops which iterate over the list once- O(2n). In Big-O notation time-complexity would be O(n).
+
+
+TASK2:
+--------
+Worst-case time-complexity: O(n)
+There are two for loops; one iterating over the list once and other once over the dictionary - O(2n). Hence time-complexity would be O(n).
+
+
+TASK3:
+---------
+Worst-case time-complexity: O(n^2)
+In worst-case scenario when the area_code and telephone number is of same size, startwith function would iterate over letter n times inside for loop.
+Sorting would take O(nlogn).
+Hence, O(n^2) in worst case scenario.
+
+
+TASK4:
+---------
+Worst-case time-complexity: O(nlogn)
+In worst-case it has to go over all 2 list once using two for loops - O(2n)
+On the third loop, it checks in set for each element - O(n)
+Sorting would take - O(nlogn)
+Hence, O(nlogn)
