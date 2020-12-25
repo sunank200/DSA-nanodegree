@@ -18,16 +18,15 @@ There are two for loops; one iterating over the list once and other once over th
 
 TASK3:
 ---------
-Worst-case time-complexity: O(n^2)
-In worst-case scenario when the area_code and telephone number is of same size, startwith function would iterate over letter n times inside for loop.
+Worst-case time-complexity: O(nlogn)
+In worst-case scenario, area code is computed and  startwith function would be in constant time.
 Sorting would take O(nlogn).
-Hence, O(n^2) in worst case scenario.
+Hence, O(nlogn) in worst case scenario.
 
 
 TASK4:
 ---------
 Worst-case time-complexity: O(nlogn)
-In worst-case it has to go over all 2 list once using two for loops - O(2n)
-On the third loop, it checks in set for each element - O(n)
+In worst-case Difference of sets; telemarketer_numbers = all_caller - other_numbers, would take O(len(all_caller)) i.e O(n)
 Sorting would take - O(nlogn)
 Hence, O(nlogn)
