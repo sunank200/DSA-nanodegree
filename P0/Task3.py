@@ -62,12 +62,12 @@ def getCode(telephone_number):
 
 
 def numberCalledByPeopleInArea(area_code):
-    list_of_codes = set()
+    set_of_codes = set()
     to_bangalore = 0
     to_other = 0
     for each_call in calls:
         if check_area_code(area_code, each_call[0]):
-            list_of_codes.add(getCode(each_call[1]))
+            set_of_codes.add(getCode(each_call[1]))
             if getCode(each_call[1]).startswith("(080)"):
                 to_bangalore += 1
             else:
@@ -75,9 +75,7 @@ def numberCalledByPeopleInArea(area_code):
 
     print("The numbers called by people in Bangalore have codes:")
 
-    list_of_codes = list(list_of_codes)
-    list_of_codes.sort()
-    for code in list_of_codes:
+    for code in sorted(set_of_codes):
         print(code)
 
     print(
